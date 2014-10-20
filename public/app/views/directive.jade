@@ -1,0 +1,18 @@
+.container
+    title(pic="images/needle.png") Directive Man
+    h1 ng-show / ng-hide
+        | Temperature (°C)
+        input(type="number", ng-model="temp", class="text-center")
+        span(class="label label-info", ng-show="temp < 0") ICE COLD!
+        span(class="label label-primary", ng-show="temp <= 10 && temp >= 0 && temp !== ''") COLD!
+        span(class="label label-success", ng-show="temp >= 11 && temp <= 25") LUKEWARM!
+        span(class="label label-warning", ng-show="temp >= 26 && temp <=40") WARM!
+        span(class="label label-danger", ng-show="temp > 40") HOT HOT HOT!
+        h1 ng-click / ng-disabled</h1>
+        button(ng-click="submit()" ng-disabled="!check", class="btn btn-primary") Submit
+        label(class="checkbox-inline")
+            input(type="checkbox", ng-model="check")
+            | Enable
+        h1 ng-repeat
+
+        h1 Custom Directives

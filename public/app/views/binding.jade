@@ -1,0 +1,12 @@
+.container
+    title(pic="images/snake.png") Binding Man
+    form(name="bindingForm", novalidate)
+        .form-group
+            label(for="firstName") First Name
+            input(ng-model="formData.firstName",  autocomplete="off", type="text", class="form-control", id="firstName", placeholder="Enter first name")
+        .form-group
+            label(for="lastName") Last Name
+            input(ng-model="formData.lastName", autocomplete="off", type="text", class="form-control", id="lastName", placeholder="Enter last name")
+
+    div
+        | formData: {{ formData }}

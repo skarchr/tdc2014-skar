@@ -1,0 +1,19 @@
+extends ../includes/layout
+
+block main-content
+    nav(class="navbar navbar-default", role="navigation")
+        .container
+            .navbar-header
+                button(type="button", class="navbar-toggle collapsed", data-toggle="collapse", data-target="#bs-example-navbar-collapse-1")
+                    span(class="sr-only")
+                        | Toggle navigation
+                    span(class="icon-bar")
+                    span(class="icon-bar")
+                    span(class="icon-bar")
+                a(class="navbar-brand", href="/")
+                    i(class="glyphicon glyphicon-th")
+            div(class="collapse navbar-collapse", id="bs-example-navbar-collapse-1")
+                ul(class="nav navbar-nav")
+
+    section.content
+        div(ng-view)

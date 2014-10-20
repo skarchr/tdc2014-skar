@@ -1,0 +1,18 @@
+.container
+    title(pic="images/shadow.png") Watch Man
+    select(ng-model="watchSelect", ng-options="item.name for item in repeat.module")
+        option {{item.name}}
+    br
+    br
+    .col-xs-5.text-center
+        h1 New:
+        img(ng-src="{{watchNew.image}}", height="120px")
+        h2 {{watchNew.name}}
+        h3 {{watchNew.number}}
+    div(class="col-xs-2", style="padding-top: 140px;")
+        h3(ng-show="watchOld !== ''") {{watchNew.number}} + {{watchOld.number}} = {{watchNew.number + watchOld.number}}
+    .col-xs-5.text-center
+        h1 Previous:
+        img(ng-src="{{watchOld.image}}", height="120px")
+        h2 {{watchOld.name}}
+        h3 {{watchOld.number}}
