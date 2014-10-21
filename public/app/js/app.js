@@ -56,17 +56,3 @@
         }]);
 
 })();
-
-
-/*
- .config(function($routeProvider, $locationProvider){
- $locationProvider.html5Mode(true);
- $routeProvider
- .when('/', { templateUrl: '/partials/main/main', controller:'mvMainCtrl' })
- .when('/reports', { templateUrl: '/partials/reports/reports', controller:'mvMainCtrl' })
- .when('/links', { templateUrl: '/partials/links/links', controller:'mvMainCtrl' })
- .when('/risks', { templateUrl: '/partials/risks/risks', controller:'mvMainCtrl' })
- .when('/about', { templateUrl: '/partials/about/about', controller:'mvMainCtrl' });
-
- });
- */
