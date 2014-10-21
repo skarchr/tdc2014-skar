@@ -62,7 +62,7 @@
             };
         })
 
-        .directive('hoverMenu', function(){
+        .directive('hoverMenu',['$location', function($location){
             return {
                 restrict: 'A',
                 transclude:false,
@@ -93,7 +93,10 @@
 
                     $(elem[0]).on('click', function(){
                         if(scope.link !== undefined){
-                            location.href= scope.link;
+                            scope.$apply(function(){
+                                $location.path(scope.link);
+                                scope.$parent.activePage = scope.link;
+                            });
                         } else {
                             alert(' X__x link missing!');
                         }
@@ -103,7 +106,7 @@
                 }
             };
 
-        })
+        }])
         .directive('jump', function(){
             return  {
                 restrict:'A',
