@@ -1,6 +1,3 @@
-body {
-  padding-top: 121px;
-}
 footer {
   padding-top: 40px;
   color: #fff;
@@ -92,4 +89,13 @@ path[fill^='#EEDD66'] {
   background: #ccc;
   border: 2 px solid #ccc;
   color: #000;
+}
+.navbar {
+  padding-top: 50px;
+}
+.navbar-nav > li >a {
+  padding: 0;
+}
+.navbar-nav > li {
+  padding-right: 10px;
 }

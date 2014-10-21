@@ -97,6 +97,7 @@
                         } else {
                             alert(' X__x link missing!');
                         }
+
                     });
 
                 }
@@ -167,13 +168,5 @@
                 }
             }
         });
-        /*.directive('draggable', function(){
-            return {
-                restrict:'A',
-                link:function(scope, elem){
-                    elem.draggable();
-                }
-            };
-        })*/
 
 })();
