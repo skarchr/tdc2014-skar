@@ -10,10 +10,11 @@ block main-content
                     span(class="icon-bar")
                     span(class="icon-bar")
                     span(class="icon-bar")
-                a(class="navbar-brand", href="/", style="padding:0;padding-right:20px", ng-click="activePage = ''")
-                    img(src="/app/images/ngManStraight.png" height="45")
             div(class="collapse navbar-collapse", id="bs-example-navbar-collapse-1")
                 ul(class="nav navbar-nav active-page")
+                    li
+                        a(href="/{{activePage}}")
+                            img(ng-src="{{activeImage}}", height="45")
                     li
                         span {{activePage | capitalize}} Man
                 ul(class="nav navbar-nav pull-right")
