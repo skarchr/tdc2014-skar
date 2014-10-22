@@ -21,27 +21,35 @@ block main-content
                     li
                         a(href="/init")
                             img(ng-hide="activePage == 'init'" src="/app/images/spark.png", height="45")
+                            span(class="spacer", ng-show="activePage == 'init'") 1
                     li
                         a(href="/binding")
                             img(ng-hide="activePage == 'binding'", src="/app/images/snake.png", height="45")
+                            span(class="spacer", ng-show="activePage == 'binding'") 2
                     li
                         a(href="/directive")
                             img(ng-hide="activePage == 'directive'", src="/app/images/needle.png", height="45")
+                            span(class="spacer", ng-show="activePage == 'directive'") 3
                     li
                         a(href="/form")
                             img(ng-hide="activePage == 'form'", src="/app/images/top.png", height="45")
+                            span(class="spacer", ng-show="activePage == 'form'") 4
                     li
                         a(href="/watch")
                             img(ng-hide="activePage == 'watch'", src="/app/images/shadow.png", height="45")
+                            span(class="spacer", ng-show="activePage == 'watch'") 5
                     li
                         a(href="/filter")
                             img(ng-hide="activePage == 'filter'", src="/app/images/magnet.png", height="45")
+                            span(class="spacer", ng-show="activePage == 'filter'") 6
                     li
                         a(href="/factory")
                             img(ng-hide="activePage == 'factory'", src="/app/images/gemini.png", height="45")
+                            span(class="spacer", ng-show="activePage == 'factory'") 7
                     li
                         a(href="/animate")
                             img(ng-hide="activePage == 'animate'", src="/app/images/hard.png", height="45")
+                            span(class="spacer", ng-show="activePage == 'animate'") 8
 
 
     section.content

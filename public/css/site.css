@@ -13,6 +13,13 @@
   font-size: 45px;
   text-shadow: 9px -6px 0px #2d2b2b;
 }
+.spacer {
+  font-family: pixel;
+  color: #fff;
+  font-size: 45px;
+  text-shadow: 9px -6px 0px #2d2b2b;
+  padding: 0;
+}
 .nav.navbar-nav.pull-right > li > a > img {
   box-shadow: 9px -6px 0px #2d2b2b;
 }
