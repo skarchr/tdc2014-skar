@@ -18,8 +18,8 @@
                 when('/', {
                     templateUrl: '/partials/views/menu'
                 }).
-                when('/start', {
-                    templateUrl: '/partials/views/start',
+                when('/init', {
+                    templateUrl: '/partials/views/init',
                     controller: 'commonController'
                 }).
                 when('/binding', {

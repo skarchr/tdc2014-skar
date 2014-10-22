@@ -8,9 +8,17 @@
   padding: 150px 0 150px 0;
   text-transform: uppercase;
 }
+.active-page > li > span {
+  color: #fff;
+  font-size: 45px;
+}
+.active-page > li {
+  height: 25px;
+}
 h1,
 h2,
-h3 {
+h3,
+.active-page {
   font-family: pixel;
 }
 footer {

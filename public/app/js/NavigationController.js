@@ -5,6 +5,7 @@
 
         $scope.activePage = '';
 
+
         $scope.$watch(function() { return $location.path(); }, function(){
             $scope.activePage = $location.path().split('/')[1];
         });

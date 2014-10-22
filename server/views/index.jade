@@ -13,37 +13,40 @@ block main-content
                 a(class="navbar-brand", href="/", style="padding:0;padding-right:20px", ng-click="activePage = ''")
                     img(src="/app/images/ngManStraight.png" height="45")
             div(class="collapse navbar-collapse", id="bs-example-navbar-collapse-1")
-                ul(class="nav navbar-nav")
+                ul(class="nav navbar-nav active-page")
                     li
-                        a(href="/start", ng-click="activePage = 'start'")
-                            img(ng-hide="activePage == 'start'" src="/app/images/spark.png", height="45")
-                            img(ng-show="activePage == 'start'" src="/app/images/spark_tingy.png", height="45")
+                        span {{activePage | capitalize}} Man
+                ul(class="nav navbar-nav pull-right")
                     li
-                        a(href="/binding", ng-click="activePage = 'binding'")
+                        a(href="/init")
+                            img(ng-hide="activePage == 'init'" src="/app/images/spark.png", height="45")
+                            img(ng-show="activePage == 'init'" src="/app/images/spark_tingy.png", height="45")
+                    li
+                        a(href="/binding")
                             img(ng-hide="activePage == 'binding'", src="/app/images/snake.png", height="45")
                             img(ng-show="activePage == 'binding'", src="/app/images/snake_tiny.png", height="45")
                     li
-                        a(href="/directive", ng-click="activePage = 'directive'")
+                        a(href="/directive")
                             img(ng-hide="activePage == 'directive'", src="/app/images/needle.png", height="45")
                             img(ng-show="activePage == 'directive'", src="/app/images/directive_tiny.png", height="45")
                     li
-                        a(href="/form", ng-click="activePage = 'form'")
+                        a(href="/form")
                             img(ng-hide="activePage == 'form'", src="/app/images/top.png", height="45")
                             img(ng-show="activePage == 'form'", src="/app/images/top_tiny.png", height="45")
                     li
-                        a(href="/watch", ng-click="activePage = 'watch'")
+                        a(href="/watch")
                             img(ng-hide="activePage == 'watch'", src="/app/images/shadow.png", height="45")
                             img(ng-show="activePage == 'watch'", src="/app/images/shadow_tiny.png", height="45")
                     li
-                        a(href="/filter", ng-click="activePage = 'filter'")
+                        a(href="/filter")
                             img(ng-hide="activePage == 'filter'", src="/app/images/magnet.png", height="45")
                             img(ng-show="activePage == 'filter'", src="/app/images/magnet_tiny.png", height="45")
                     li
-                        a(href="/factory", ng-click="activePage = 'factory'")
+                        a(href="/factory")
                             img(ng-hide="activePage == 'factory'", src="/app/images/gemini.png", height="45")
                             img(ng-show="activePage == 'factory'", src="/app/images/gemini_tiny.png", height="45")
                     li
-                        a(href="/animate", ng-click="activePage = 'animate'")
+                        a(href="/animate")
                             img(ng-hide="activePage == 'animate'", src="/app/images/hard.png", height="45")
                             img(ng-show="activePage == 'animate'", src="/app/images/hard_tiny.png", height="45")
 
