@@ -14,42 +14,34 @@ block main-content
                 ul(class="nav navbar-nav active-page")
                     li
                         a(href="/{{activePage}}")
-                            img(ng-src="{{activeImage}}", height="45")
+                            img(ng-src="{{activeImage}}", height="60")
                     li
                         span {{activePage | capitalize}} Man
                 ul(class="nav navbar-nav pull-right")
                     li
                         a(href="/init")
                             img(ng-hide="activePage == 'init'" src="/app/images/spark.png", height="45")
-                            img(ng-show="activePage == 'init'" src="/app/images/spark_tingy.png", height="45")
                     li
                         a(href="/binding")
                             img(ng-hide="activePage == 'binding'", src="/app/images/snake.png", height="45")
-                            img(ng-show="activePage == 'binding'", src="/app/images/snake_tiny.png", height="45")
                     li
                         a(href="/directive")
                             img(ng-hide="activePage == 'directive'", src="/app/images/needle.png", height="45")
-                            img(ng-show="activePage == 'directive'", src="/app/images/directive_tiny.png", height="45")
                     li
                         a(href="/form")
                             img(ng-hide="activePage == 'form'", src="/app/images/top.png", height="45")
-                            img(ng-show="activePage == 'form'", src="/app/images/top_tiny.png", height="45")
                     li
                         a(href="/watch")
                             img(ng-hide="activePage == 'watch'", src="/app/images/shadow.png", height="45")
-                            img(ng-show="activePage == 'watch'", src="/app/images/shadow_tiny.png", height="45")
                     li
                         a(href="/filter")
                             img(ng-hide="activePage == 'filter'", src="/app/images/magnet.png", height="45")
-                            img(ng-show="activePage == 'filter'", src="/app/images/magnet_tiny.png", height="45")
                     li
                         a(href="/factory")
                             img(ng-hide="activePage == 'factory'", src="/app/images/gemini.png", height="45")
-                            img(ng-show="activePage == 'factory'", src="/app/images/gemini_tiny.png", height="45")
                     li
                         a(href="/animate")
                             img(ng-hide="activePage == 'animate'", src="/app/images/hard.png", height="45")
-                            img(ng-show="activePage == 'animate'", src="/app/images/hard_tiny.png", height="45")
 
 
     section.content

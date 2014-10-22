@@ -1,6 +1,7 @@
 .container
-    select(ng-model="watchSelect", ng-options="item.name for item in repeat.module")
-        option {{item.name}}
+    .col-xs-12.text-center
+        select(ng-model="watchSelect", class="input-large", ng-options="item.name for item in repeat.module")
+            option {{item.name}}
     br
     br
     .col-xs-5.text-center
