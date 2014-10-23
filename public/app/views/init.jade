@@ -1,4 +1,4 @@
-.container
+.container(ng-hide="toggle.showCode.state")
 
     h2 GETTING STARTED
 
@@ -7,3 +7,7 @@
         li Create angular.module and add to view
         li Set up routes
         li Add ng-view
+
+
+.container(ng-show="toggle.showCode.state")
+    h1 CODE COMES HERE

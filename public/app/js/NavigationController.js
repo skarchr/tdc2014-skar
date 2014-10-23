@@ -7,6 +7,12 @@
 
         $scope.activeImage = '';
 
+        $scope.toggle = {
+            showCode: {
+                state: false
+            }
+        };
+
 
         $scope.$watch(function() { return $location.path(); }, function(){
             $scope.activePage = $location.path().split('/')[1];

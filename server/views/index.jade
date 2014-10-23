@@ -1,6 +1,18 @@
 extends ../includes/layout
 
 block main-content
+
+    .container(ng-hide="activePage == ''")
+        ul(class="list-unstyled list-inline pull-left", style="padding-top:5px;min-height:10px;margin-bottom:5px;")
+            li
+                a(href="/", class="btn btn-default btn-xs") Select
+            li
+                a(href="/", class="btn btn-default btn-xs") Start
+
+
+        ul(class="list-unstyled list-inline pull-right", style="padding-top:5px;min-height:10px;margin-bottom:5px;")
+            li
+                a(class="btn btn-default btn-xs {{toggle.showCode.state ? 'active':''}}", ng-click="toggle.showCode.state = !toggle.showCode.state") Inspect code
     nav(class="navbar navbar-default", role="navigation", ng-hide="activePage == ''")
         .container
             .navbar-header
