@@ -1,13 +1,36 @@
-.container(ng-hide="toggle.showCode.state")
+.container
+    h1 GETTING STARTED
+        | ({{step}}/5)
 
-    h2 GETTING STARTED
+.container
 
-    ol
-        li Include 'angular.js' file into index.html
-        li Create angular.module and add to view
-        li Set up routes
-        li Add ng-view
+    ul(class="list-unstyled")
+        li(ng-show="step >= 0")
+            h3 STEP 0: ADD angular.js TO YOUR HTML PAGE
+        li(ng-show="toggle.showCode.state && step >= 0")
+            | Code here
+        li(ng-show="step >= 1")
+            h3 STEP 1: ADD "ng-app" TO HTML ELEMENT
+        li(ng-show="toggle.showCode.state && step >= 1")
+            | Code here
+        li(ng-show="step >= 2")
+            h3 STEP 2: CREATE ANGULAR MODULE
+        li(ng-show="toggle.showCode.state && step >= 2")
+            | Code here
+        li(ng-show="step >= 3")
+            h3 STEP 3: REFERENCE YOUR ANGULAR MODULE TO "ng-app"
+        li(ng-show="toggle.showCode.state && step >= 3")
+            | Code here
+        li(ng-show="step >= 4")
+            h3 STEP 4: WRITE CONTROLLER
+        li(ng-show="toggle.showCode.state && step >= 4")
+            | Code here
+        li(ng-show="step >= 5")
+            h3 STEP 5: ADD YOUR SCRIPTS
+        li(ng-show="toggle.showCode.state && step >= 5")
+            | Code here
 
+.container
+    button(ng-click="step = step - 1", ng-disabled="step == 0" class="btn btn-default btn-md") Prev
+    button(ng-click="step = step + 1", ng-disabled="step == 5",class="btn btn-default btn-md") Next
 
-.container(ng-show="toggle.showCode.state")
-    h1 CODE COMES HERE

@@ -30,7 +30,7 @@
                 when('/init', {
                     title:'Init',
                     templateUrl: '/partials/views/init',
-                    controller: 'commonController'
+                    controller: 'initController'
                 }).
                 when('/binding', {
                     title:'Binding',
