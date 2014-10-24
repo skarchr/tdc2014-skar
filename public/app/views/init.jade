@@ -1,6 +1,6 @@
 .container
     h1 GETTING STARTED
-        | ({{step}}/5)
+        | ({{step}}/7)
 
 .container
 
@@ -8,29 +8,37 @@
         li(ng-show="step >= 0")
             h3 STEP 0: ADD angular.js TO YOUR HTML PAGE
         li(ng-show="toggle.showCode.state && step >= 0")
-            | Code here
+            span(ng-include="'app/views/partials/init_code/step_0.html'")
         li(ng-show="step >= 1")
             h3 STEP 1: ADD "ng-app" TO HTML ELEMENT
         li(ng-show="toggle.showCode.state && step >= 1")
-            | Code here
+            span(ng-include="'app/views/partials/init_code/step_1.html'")
         li(ng-show="step >= 2")
             h3 STEP 2: CREATE ANGULAR MODULE
         li(ng-show="toggle.showCode.state && step >= 2")
-            | Code here
+            span(ng-include="'app/views/partials/init_code/step_2.html'")
         li(ng-show="step >= 3")
             h3 STEP 3: REFERENCE YOUR ANGULAR MODULE TO "ng-app"
         li(ng-show="toggle.showCode.state && step >= 3")
-            | Code here
+            span(ng-include="'app/views/partials/init_code/step_3.html'")
         li(ng-show="step >= 4")
             h3 STEP 4: WRITE CONTROLLER
         li(ng-show="toggle.showCode.state && step >= 4")
-            | Code here
+            span(ng-include="'app/views/partials/init_code/step_4.html'")
         li(ng-show="step >= 5")
             h3 STEP 5: ADD YOUR SCRIPTS
         li(ng-show="toggle.showCode.state && step >= 5")
-            | Code here
+            span(ng-include="'app/views/partials/init_code/step_5.html'")
+        li(ng-show="step >= 6")
+            h3 STEP 6: SET UP ROUTES (IF YOU WANT A SPA)
+        li(ng-show="toggle.showCode.state && step >= 6")
+            span(ng-include="'app/views/partials/init_code/step_6.html'")
+        li(ng-show="step >= 7")
+            h3 STEP 7: ADD "ng-view" AND FILES
+        li(ng-show="toggle.showCode.state && step >= 6")
+            span(ng-include="'app/views/partials/init_code/step_7.html'")
 
 .container
     button(ng-click="step = step - 1", ng-disabled="step == 0" class="btn btn-default btn-md") Prev
-    button(ng-click="step = step + 1", ng-disabled="step == 5",class="btn btn-default btn-md") Next
+    button(ng-click="step = step + 1", ng-disabled="step == 7",class="btn btn-default btn-md") Next
 

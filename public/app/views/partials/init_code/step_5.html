@@ -1,0 +1,23 @@
+<pre>
+    <code class="html" ng-non-bindable>
+        &lt;html ng-app="app"&gt;
+        &lt;head&gt;
+            &lt;title&gt;ngMan&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body ng-controller="acmeController"&gt;
+        &lt;/body&gt;
+        &lt;script src="/vendor/angular/angular.min.js"&gt;&lt;/script&gt;
+
+        &lt;script src="/js/app.js"&gt;&lt;/script&gt;
+        &lt;script src="/js/AcmeController.js"&gt;&lt;/script&gt;
+        &lt;/html&gt;
+    </code>
+</pre>
+
+<script>
+    (function(){
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    })();
+</script>

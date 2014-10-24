@@ -1,0 +1,28 @@
+<pre>
+    <code class="javascript" ng-non-bindable>
+        (function(){
+            'use strict';
+            angular.module('app').config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
+
+                $locationProvider.html5Mode(true);
+
+                $routeProvider.
+                    when('/acme', {
+                    templateUrl: '/path/acme'
+                    controller: 'acmeController'
+                }).
+                    otherwise({
+                    redirectTo: '/path/index'
+                });
+            }]);
+        })();
+    </code>
+</pre>
+
+<script>
+    (function(){
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    })();
+</script>
