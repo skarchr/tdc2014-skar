@@ -6,6 +6,7 @@
         $scope.temp = '';
 
         $scope.check = false;
+        $scope.run = false;
 
         $scope.submit = function(){
             alert('HelloWorld!');
