@@ -64,8 +64,7 @@
                 }).
                 when('/animate', {
                     title:'Animate',
-                    templateUrl: 'partials/views/animate',
-                    controller: 'commonController'
+                    templateUrl: 'partials/views/animate'
                 }).
                 otherwise({
                     redirectTo: '/partials/views/menu'
