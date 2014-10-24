@@ -29,8 +29,7 @@
                 }).
                 when('/init', {
                     title:'Init',
-                    templateUrl: '/partials/views/init',
-                    controller: 'initController'
+                    templateUrl: '/partials/views/init'
                 }).
                 when('/binding', {
                     title:'Binding',

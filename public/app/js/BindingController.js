@@ -1,15 +1,15 @@
 (function(){
     'use strict';
 
-    angular.module('app').controller('bindingController', function($scope){
-
-        $scope.bindingMan = 'binding man';
+    angular.module('app').controller('bindingController', ['$scope', function($scope){
 
         $scope.formData = {
             firstName:'',
-            lastName:''
+            lastName:'',
+            age:'',
+            postcode:''
         };
-    });
+    }]);
 
 
 })();

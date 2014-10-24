@@ -27,13 +27,17 @@ button {
 .nav.navbar-nav.pull-right > li > a > img {
   box-shadow: 9px -6px 0px #2d2b2b;
 }
+label {
+  font-size: 20px;
+}
 .active-page > li {
   height: 25px;
 }
 h1,
 h2,
 h3,
-.active-page {
+.active-page,
+label {
   font-family: pixel;
 }
 footer {

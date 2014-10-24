@@ -1,0 +1,66 @@
+<pre>
+    <code class="html" ng-non-bindable>
+        &lt;form name="bindingForm" novalidate="novalidate"&gt;
+            &lt;div class="form-group"&gt;
+                &lt;label for="firstName"&gt;First Name&lt;/label&gt;
+                &lt;input ng-model="formData.firstName" class="form-control"/&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-group"&gt;
+                &lt;label for="lastName"&gt;Last Name&lt;/label&gt;
+                &lt;input ng-model="formData.lastName" class="form-control"/&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-group"&gt;
+                &lt;label for="age"&gt;Age&lt;/label&gt;&lt;input ng-model="formData.age" class="form-control"/&gt;
+            &lt;/div&gt;
+
+            &lt;div class="form-group"&gt;
+                &lt;label for="numberTwo"&gt;Postcode&lt;/label&gt;
+                &lt;input ng-model="formData.postcode" class="form-control"/&gt;
+            &lt;/div&gt;
+        &lt;/form&gt;
+
+        &lt;h3&gt;Curly markup&lt;/h3&gt;
+        &lt;p&gt;formModel: {{ formData | json }}&lt;/p&gt;
+        &lt;p&gt;You {{ formData.postcode !== 8099 ? "don't":"" }} live at Jan Mayen!&lt;/p&gt;
+        &lt;p&gt;You are {{ formData.age &gt;= 18 ? "":"not" }} old enough to buy beer.&lt;/p&gt;
+        &lt;p&gt;You are halfway to {{ formData.age * 2 }}.&lt;/p&gt;
+
+        &lt;h3&gt;ng-bind&lt;/h3&gt;
+        &lt;p ng-bind="formData.firstName"&gt;&lt;/p&gt;
+
+        &lt;h3&gt;ng-model&lt;/h3&gt;
+        &lt;input ng-model="formData.firstName" placeholder="ng-model"/&gt;
+        &lt;input ng-model="formData.firstName" placeholder="ng-model"/&gt;
+        &lt;input ng-model="formData.firstName" placeholder="ng-model"/&gt;
+        &lt;input ng-model="formData.firstName" placeholder="ng-model"/&gt;
+    </code>
+</pre>
+
+<pre>
+    <code class="javascript">
+        (function(){
+            'use strict';
+
+            angular.module('app').controller('bindingController', ['$scope', function($scope){
+
+                $scope.formData = {
+                    firstName:'',
+                    lastName:'',
+                    age:'',
+                    postcode:''
+                };
+            }]);
+
+        })();
+    </code>
+</pre>
+
+<script>
+    (function(){
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    })();
+</script>

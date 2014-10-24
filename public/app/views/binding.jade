@@ -1,11 +1,35 @@
-.container(ng-hide="toggle.showCode.state")
-    form(name="bindingForm", novalidate)
-        .form-group
-            label(for="firstName") First Name
-            input(ng-model="formData.firstName",  autocomplete="off", type="text", class="form-control", id="firstName", placeholder="Enter first name")
-        .form-group
-            label(for="lastName") Last Name
-            input(ng-model="formData.lastName", autocomplete="off", type="text", class="form-control", id="lastName", placeholder="Enter last name")
+.container
+    .col-xs-6
+        form(name="bindingForm", novalidate)
+            .form-group
+                label(for="firstName") First Name
+                input(ng-model="formData.firstName",  autocomplete="off", type="text", class="form-control",placeholder="Enter first name")
+            .form-group
+                label(for="lastName") Last Name
+                input(ng-model="formData.lastName", autocomplete="off", type="text", class="form-control",  placeholder="Enter last name")
+            .form-group
+                label(for="age") Age
+                input(ng-model="formData.age", autocomplete="off", type="number", class="form-control", placeholder="Enter age")
+            .form-group
+                label(for="numberTwo") Postcode
+                input(ng-model="formData.postcode", autocomplete="off", type="number", class="form-control", placeholder="Enter postcode")
 
-    div
-        | formData: {{ formData }}
+    .col-xs-6.well
+        h3 Curly markup
+
+        p formModel: {{ formData | json }}
+        p You {{ formData.postcode !== 8099 ? "don't":"" }} live at Jan Mayen!
+        p You are {{ formData.age >= 18 ? "":"not" }} old enough to buy beer.
+        p You are halfway to {{ formData.age * 2 }}.
+        h3 ng-bind
+        p(ng-bind="formData.firstName")
+
+        h3 ng-model
+        input(ng-model="formData.firstName", placeholder="ng-model")
+        input(ng-model="formData.firstName", placeholder="ng-model")
+        input(ng-model="formData.firstName", placeholder="ng-model")
+        input(ng-model="formData.firstName", placeholder="ng-model")
+
+.container(ng-show="toggle.showCode.state")
+    .col-xs-12
+        div(ng-include="'app/views/partials/binding_code/binding_code.html'")
