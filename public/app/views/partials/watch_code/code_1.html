@@ -1,0 +1,54 @@
+<pre>
+    <code class="javascript" ng-non-bindable>
+
+        $scope.watchSelect = "";
+        $scope.watchNew = "";
+        $scope.watchOld = "";
+
+        $scope.$watch('watchSelect', function(newVal, oldVal){
+            if(newVal !== oldVal){
+                $scope.watchNew = newVal;
+                $scope.watchOld = oldVal;
+            }
+        });
+
+    </code>
+</pre>
+
+<pre>
+    <code class="html" ng-non-bindable>
+
+        &lt;select ng-model="watchSelect" ng-options="item.name for item in repeat.module"&gt;
+            &lt;option&gt;{{item.name}}&lt;/option&gt;
+        &lt;/select&gt;
+
+        &lt;div&gt;
+            &lt;h1&gt;New:&lt;/h1&gt;
+            &lt;img ng-src="{{watchNew.image}}"/&gt;
+            &lt;h2&gt;{{watchNew.name}}&lt;/h2&gt;
+            &lt;h3&gt;{{watchNew.number}}&lt;/h3&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;h3 ng-show="watchOld !== ''"&gt;{{watchNew.number}} + {{watchOld.number}} = {{watchNew.number + watchOld.number}}&lt;/h3&gt;
+        &lt;/div&gt;
+
+        &lt;div&gt;
+            &lt;h1&gt;Previous:&lt;/h1&gt;
+            &lt;img ng-src="{{watchOld.image}}"/&gt;
+            &lt;h2&gt;{{watchOld.name}}&lt;/h2&gt;
+            &lt;h3&gt;{{watchOld.number}}&lt;/h3&gt;
+        &lt;/div&gt;
+        
+
+    </code>
+</pre>
+
+
+<script>
+    (function(){
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    })();
+</script>
