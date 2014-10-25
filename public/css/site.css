@@ -81,3 +81,6 @@ label {
 .blink_me {
   border: 5px solid #f00;
 }
+.pointer {
+  cursor: pointer;
+}

@@ -1,4 +1,4 @@
-div(class="container menu-container", ng-controller="menuController")
+div(class="container menu-container hidden-xs", ng-controller="menuController")
     .row.angular-background
         .frame.col-xs-offset-3.col-xs-2.text-center
             img(data-hover-menu="upLeft", data-link="/init", src="/app/images/spark.png", alt="sparkman",height="128")
@@ -35,4 +35,31 @@ div(class="container menu-container", ng-controller="menuController")
             h3 Filter
         .frame.col-xs-2.text-center
             img(data-hover-menu="downRight", data-link="/watch", src="/app/images/shadow.png", alt="shadow", height="128")
+            h3 Watch
+
+div(class="container menu-container visible-xs")
+    .row
+        .col-xs-6.text-center.pointer
+            img(data-hover-menu="upLeft", data-link="/init", src="/app/images/spark.png", alt="sparkman",height="256")
+            h3 Init
+        .col-xs-6.text-center.pointer
+            img(data-hover-menu="up" data-link="/binding" src="/app/images/snake.png" alt="snakeman", height="256")
+            h3 Binding
+        .col-xs-6.text-center.pointer
+            img(data-hover-menu="upRight", data-link="/directive", src="/app/images/needle.png", alt="needle", height="256")
+            h3 Directive
+        .col-xs-6.text-center.pointer
+            img(data-hover-menu="left", data-link="/tip", src="/app/images/hard.png", alt="hard", height="256")
+            h3 Tip
+        .col-xs-6.text-center.pointer
+            img(data-hover-menu="right", data-link="/form", src="/app/images/top.png", alt="top", height="256")
+            h3 Form
+        .col-xs-6.text-center.pointer
+            img(data-hover-menu="downLeft", data-link="/animate", src="/app/images/gemini.png", alt="gemini", height="256")
+            h3 Animate
+        .col-xs-6.text-center.pointer
+            img(data-hover-menu="down", data-link="/filter", src="/app/images/magnet.png", alt="magnet", height="256")
+            h3 Filter
+        .col-xs-6.text-center.pointer
+            img(data-hover-menu="downRight", data-link="/watch", src="/app/images/shadow.png", alt="shadow", height="256")
             h3 Watch
