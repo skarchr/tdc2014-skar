@@ -24,7 +24,7 @@
             $locationProvider.html5Mode(true);
 
             $routeProvider.
-                when('/', {
+                when('/menu', {
                     templateUrl: '/partials/views/menu'
                 }).
                 when('/init', {
@@ -65,7 +65,7 @@
                     templateUrl: 'partials/views/tip'
                 }).
                 otherwise({
-                    redirectTo: '/partials/views/menu'
+                    templateUrl: 'partials/views/start'
                 });
         }]);
 

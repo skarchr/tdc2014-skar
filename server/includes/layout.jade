@@ -9,6 +9,6 @@ html(ng-app='app')
         link(rel="stylesheet", href="/css/site.css")
         link(rel="stylesheet", href="/vendor/highlightjs/styles/monokai.css")
 
-    body(ng-controller="navigationController")
+    body(ng-controller="navigationController", style="background-color:{{activePage != '' ? '#FFF':'#333333'}}")
         block main-content
         include scripts

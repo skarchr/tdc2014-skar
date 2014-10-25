@@ -12,7 +12,6 @@
                 state: false
             }
         };
-
         $scope.step = 0;
 
         $scope.$watch(function() { return $location.path(); }, function(){
