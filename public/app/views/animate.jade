@@ -1,6 +1,6 @@
 .container
     .col-xs-12
-        h1 DIRECTIVES THAT SUPPORT ANIMATIONS:
+        h3 DIRECTIVES THAT SUPPORT ANIMATIONS:
 
 
         div(class="col-xs-3 panel panel-default text-center", ng-repeat="item in ['ngRepeat', 'ngView','ngInclude', 'ngSwitch', 'ngIf','ngClass', 'ngShow', 'ngHide']")
@@ -8,18 +8,18 @@
 
 .container
     .col-xs-12
-        h1 STEP 0: ADD angular-animate.js TO YOUR Page
+        h3 STEP 0: ADD angular-animate.js TO YOUR Page
     .col-xs-12(ng-show="toggle.showCode.state", class="code-view")
         div(ng-include="'app/views/partials/animate_code/code_1.html'")
 
 .container
     .col-xs-12
-        h1 STEP 1: ADD "ngAnimate" INTO MODULE
+        h3 STEP 1: ADD "ngAnimate" INTO MODULE
     .col-xs-12(ng-show="toggle.showCode.state", class="code-view")
         div(ng-include="'app/views/partials/animate_code/code_2.html'")
 
 .container
     .col-xs-12
-        h1 STEP 2: ADD CSS
+        h3 STEP 2: ADD CSS
     .col-xs-12(ng-show="toggle.showCode.state", class="code-view")
         div(ng-include="'app/views/partials/animate_code/code_3.html'")

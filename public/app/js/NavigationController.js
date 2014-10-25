@@ -39,7 +39,7 @@
                 case 'animate':
                     $scope.activeImage = '/app/images/gemini.png'
                     break;
-                case 'cred':
+                case 'tip':
                     $scope.activeImage = '/app/images/hard.png'
                     break;
                 default:
