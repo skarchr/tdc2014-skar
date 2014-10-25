@@ -1,29 +1,35 @@
-.container(ng-hide="toggle.showCode.state")
-    h3 OrderBy
-    br
-    select(ng-model="predicate")
-        option(value="name") Name
-        option(value="number") Number
-    label(class="checkbox-inline")
-        input(type="checkbox", ng-model="reverse")
-        | Descending
-    input(type="text", class="pull-right", ng-model="filtering", placeholder="Search")
-    table(class="table")
-        thead
-            tr
-                th #
-                th Image
-                th Name
-        tbody
-            tr(class="table-row", ng-repeat="item in repeat.module | orderBy: predicate:reverse | filter:filtering")
-                td {{item.number}}
-                td
-                    img(ng-src="{{item.image}}", height="24px")
-                td {{item.name}}
-    h3 Others
-    input(ng-model="otherFilters", type="text")
-    h4 uppercase: {{ otherFilters | uppercase }}
-    h4 lowercase: {{ otherFilters | lowercase }}
-    h4 currency: {{ otherFilters | currency:'NOK ' }}
+.container
+    .col-xs-12
+        h3 BUILT IN
+        .col-xs-6
 
-    | fizzbuzz
+            label Model
+            br
+            input(ng-model="otherFilters", type="text")
+        .col-xs-6.well
+
+            h4 uppercase: {{ otherFilters | uppercase }}
+            h4 lowercase: {{ otherFilters | lowercase }}
+            h4 orderBy: {{ otherFilters | orderBy }}
+            h4 orderBy reverse: {{ otherFilters | orderBy: null: true }}
+
+.container(ng-show="toggle.showCode.state", class="code-view")
+    .col-xs-12
+        div(ng-include="'app/views/partials/filter_code/code_1.html'")
+
+
+
+
+.container
+    .col-xs-12
+        h3 MAKE YOUR OWN
+        .col-xs-12.well
+            h3 WITHOUT FILTER
+            div(ng-repeat="item in integerList", class="col-xs-1") {{item }}
+        .col-xs-12.well
+            h3 WITH FILTER
+            div(ng-repeat="item in integerList", class="col-xs-1") {{item | fizzbuzz}}
+
+.container(ng-show="toggle.showCode.state", class="code-view")
+    .col-xs-12
+        div(ng-include="'app/views/partials/filter_code/code_2.html'")

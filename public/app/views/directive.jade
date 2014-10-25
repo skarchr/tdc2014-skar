@@ -18,7 +18,7 @@
             .col-xs-6
                 img(src="/app/images/standing_blinking_512.gif", height="128", ng-show="check")
 
-.container(ng-show="toggle.showCode.state")
+.container(ng-show="toggle.showCode.state", class="code-view")
     .col-xs-12
         div(ng-include="'app/views/partials/directive_code/code_1.html'")
 
@@ -34,7 +34,7 @@
                     img(ng-src="{{mod.image}}", height="48")
                 .col-xs-12
                     h5 {{ mod.name }}
-.container(ng-show="toggle.showCode.state")
+.container(ng-show="toggle.showCode.state", class="code-view")
     .col-xs-12
         div(ng-include="'app/views/partials/directive_code/code_2.html'")
 
@@ -47,6 +47,7 @@
                 li ng-disabled
                 li ng-options
                 li ng-click
+                li ng-include
                 li ...and many more!
 
 .container
@@ -56,6 +57,6 @@
             h3 DRAGGABLE
             div(class="col-xs-3")
                 img(ng-src="{{mod.image}}", ng-repeat="mod in model.module" , height="48", data-draggable)
-.container(ng-show="toggle.showCode.state")
+.container(ng-show="toggle.showCode.state", class="code-view")
     .col-xs-12
         div(ng-include="'app/views/partials/directive_code/code_3.html'")

@@ -40,36 +40,23 @@ h3,
 label {
   font-family: pixel;
 }
-footer {
-  padding-top: 40px;
-  color: #fff;
-}
 .content > .ng-enter {
-  -webkit-animation: fadeInLeft 1s;
-  -moz-animation: fadeInLeft 1s;
-  -ms-animation: fadeInLeft 1s;
-  animation: fadeInLeft 1s;
+  -webkit-animation: bounceInLeft 1s;
+  -moz-animation: bounceInLeft 1s;
+  -ms-animation: bounceInLeft 1s;
+  animation: bounceInLeft 1s;
 }
-tr.ng-enter {
-  -webkit-animation: slideInLeft 1s;
-  -moz-animation: slideInLeft 1s;
-  -ms-animation: slideInLeft 1s;
-  animation: slideInLeft 1s;
+.code-view.ng-hide-remove {
+  -webkit-animation: zoomIn 1s;
+  -moz-animation: zoomIn 1s;
+  -ms-animation: zoomIn 1s;
+  animation: zoomIn 1s;
 }
-tr.ng-leave {
-  -webkit-animation: slideOutRight 1s;
-  -moz-animation: slideOutRight 1s;
-  -ms-animation: slideOutRight 1s;
-  animation: slideOutRight 1s;
-}
-th {
-  cursor: pointer;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.code-view.ng-hide-add {
+  -webkit-animation: zoomOut 1s;
+  -moz-animation: zoomOut 1s;
+  -ms-animation: zoomOut 1s;
+  animation: zoomOut 1s;
 }
 .navbar {
   padding-top: 50px;

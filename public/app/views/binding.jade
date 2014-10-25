@@ -30,6 +30,6 @@
         input(ng-model="formData.firstName", placeholder="ng-model")
         input(ng-model="formData.firstName", placeholder="ng-model")
 
-.container(ng-show="toggle.showCode.state")
+.container(ng-show="toggle.showCode.state", class="code-view")
     .col-xs-12
         div(ng-include="'app/views/partials/binding_code/binding_code.html'")

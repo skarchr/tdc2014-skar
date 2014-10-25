@@ -16,6 +16,6 @@
         img(ng-src="{{watchOld.image}}", height="120px")
         h2 {{watchOld.name}}
         h3 {{watchOld.number}}
-.container(ng-show="toggle.showCode.state")
+.container(ng-show="toggle.showCode.state", class="code-view")
     .col-xs-12
         div(ng-include="'app/views/partials/watch_code/code_1.html'")

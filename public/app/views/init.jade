@@ -1,44 +1,37 @@
 .container
     h1 GETTING STARTED
-        | ({{step}}/7)
-
-.container
-
     ul(class="list-unstyled")
-        li(ng-show="step >= 0")
+        li
             h3 STEP 0: ADD angular.js TO YOUR HTML PAGE
-        li(ng-show="toggle.showCode.state && step >= 0")
+        li(ng-show="toggle.showCode.state", class="code-view")
             span(ng-include="'app/views/partials/init_code/step_0.html'")
-        li(ng-show="step >= 1")
+        li
             h3 STEP 1: ADD "ng-app" TO HTML ELEMENT
-        li(ng-show="toggle.showCode.state && step >= 1")
+        li(ng-show="toggle.showCode.state", class="code-view")
             span(ng-include="'app/views/partials/init_code/step_1.html'")
-        li(ng-show="step >= 2")
+        li
             h3 STEP 2: CREATE ANGULAR MODULE
-        li(ng-show="toggle.showCode.state && step >= 2")
+        li(ng-show="toggle.showCode.state", class="code-view")
             span(ng-include="'app/views/partials/init_code/step_2.html'")
-        li(ng-show="step >= 3")
+        li
             h3 STEP 3: REFERENCE YOUR ANGULAR MODULE TO "ng-app"
-        li(ng-show="toggle.showCode.state && step >= 3")
+        li(ng-show="toggle.showCode.state", class="code-view")
             span(ng-include="'app/views/partials/init_code/step_3.html'")
-        li(ng-show="step >= 4")
+        li
             h3 STEP 4: WRITE CONTROLLER
-        li(ng-show="toggle.showCode.state && step >= 4")
+        li(ng-show="toggle.showCode.state", class="code-view")
             span(ng-include="'app/views/partials/init_code/step_4.html'")
-        li(ng-show="step >= 5")
+        li
             h3 STEP 5: ADD YOUR SCRIPTS
-        li(ng-show="toggle.showCode.state && step >= 5")
+        li(ng-show="toggle.showCode.state", class="code-view")
             span(ng-include="'app/views/partials/init_code/step_5.html'")
-        li(ng-show="step >= 6")
+        li
             h3 STEP 6: SET UP ROUTES (IF YOU WANT A SPA)
-        li(ng-show="toggle.showCode.state && step >= 6")
+        li(ng-show="toggle.showCode.state", class="code-view")
             span(ng-include="'app/views/partials/init_code/step_6.html'")
-        li(ng-show="step >= 7")
+        li
             h3 STEP 7: ADD "ng-view" AND FILES
-        li(ng-show="toggle.showCode.state && step >= 7")
+        li(ng-show="toggle.showCode.state", class="code-view")
             span(ng-include="'app/views/partials/init_code/step_7.html'")
 
-.container
-    button(ng-click="step = step - 1", ng-disabled="step == 0" class="btn btn-default btn-md") Prev
-    button(ng-click="step = step + 1", ng-disabled="step == 7",class="btn btn-default btn-md") Next
 

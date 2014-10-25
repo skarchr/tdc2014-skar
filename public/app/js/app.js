@@ -56,14 +56,13 @@
                     templateUrl: 'partials/views/filter',
                     controller: 'filterController'
                 }).
-                when('/factory', {
-                    title:'Factory',
-                    templateUrl: 'partials/views/factory',
-                    controller: 'factoryController'
-                }).
                 when('/animate', {
                     title:'Animate',
                     templateUrl: 'partials/views/animate'
+                }).
+                when('/tip', {
+                    title:'Tip',
+                    templateUrl: 'partials/views/tip'
                 }).
                 otherwise({
                     redirectTo: '/partials/views/menu'

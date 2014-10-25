@@ -1,0 +1,29 @@
+<pre>
+    <code class="html">
+        &lt;html ng-app="app"&gt;
+        &lt;head&gt;
+            &lt;title&gt;ngMan&lt;/title&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+        &lt;div ng-view&gt;&lt;/div&gt;
+        &lt;/body&gt;
+        &lt;script src="/vendor/angular/angular.min.js"&gt;&lt;/script&gt;
+        &lt;script src="/vendor/angular-route/angular-route.min.js"&gt;&lt;/script&gt;
+        &lt;script src="/vendor/angular-animate/angular-animate.min.js"&gt;&lt;/script&gt;
+
+        &lt;script src="/js/app.js"&gt;&lt;/script&gt;
+        &lt;script src="/js/RouteConfig.js"&gt;&lt;/script&gt;
+        &lt;script src="/js/Directives.js"&gt;&lt;/script&gt;
+        &lt;script src="/js/Filters.js"&gt;&lt;/script&gt;
+        &lt;script src="/js/AcmeController.js"&gt;&lt;/script&gt;
+        &lt;/html&gt;
+    </code>
+</pre>
+
+<script>
+    (function(){
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    })();
+</script>

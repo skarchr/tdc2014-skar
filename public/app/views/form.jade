@@ -20,6 +20,6 @@
             button(ng-disabled="bindingForm.$invalid", submit-button="true", class="btn btn-primary", type="submit") Submit
             div(class="btn btn-default", submit-button="false") Clear
 
-.container(ng-show="toggle.showCode.state")
+.container(ng-show="toggle.showCode.state", class="code-view")
     .col-xs-12
         div(ng-include="'app/views/partials/form_code/code_1.html'")

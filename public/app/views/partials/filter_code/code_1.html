@@ -1,0 +1,21 @@
+<pre>
+    <code class="html" ng-non-bindable>
+
+        &lt;label&gt;Model&lt;/label&gt;
+        &lt;input ng-model="otherFilters" type="text"/&gt;
+
+        &lt;h4&gt;uppercase: {{ otherFilters | uppercase }}&lt;/h4&gt;
+        &lt;h4&gt;lowercase: {{ otherFilters | lowercase }}&lt;/h4&gt;
+        &lt;h4&gt;orderBy: {{ otherFilters | orderBy }}&lt;/h4&gt;
+        &lt;h4&gt;orderBy reverse: {{ otherFilters | orderBy: null: true }}&lt;/h4&gt;
+
+    </code>
+</pre>
+
+<script>
+    (function(){
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    })();
+</script>

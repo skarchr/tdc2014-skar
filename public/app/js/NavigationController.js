@@ -37,10 +37,10 @@
                 case 'filter':
                     $scope.activeImage = '/app/images/magnet.png'
                     break;
-                case 'factory':
+                case 'animate':
                     $scope.activeImage = '/app/images/gemini.png'
                     break;
-                case 'animate':
+                case 'cred':
                     $scope.activeImage = '/app/images/hard.png'
                     break;
                 default:

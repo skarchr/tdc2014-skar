@@ -1,0 +1,31 @@
+<pre>
+    <code class="html" ng-non-bindable>
+
+        &lt;div ng-repeat="item in integerList"&gt;
+            {{item | fizzbuzz}}
+        &lt;/div&gt;
+
+    </code>
+</pre>
+
+<pre>
+    <code class="javascript" ng-non-bindable>
+        (function(){
+            'use strict';
+            angular.module('app')
+                .filter('fizzbuzz', function(){
+                    return function(input){
+                        return input % 15 == 0 ? 'FizzBuzz': input % 5 == 0 ? 'Buzz':input % 3 == 0 ? 'Fizz':input;
+                    }
+                });
+        })();
+    </code>
+</pre>
+
+<script>
+    (function(){
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    })();
+</script>
