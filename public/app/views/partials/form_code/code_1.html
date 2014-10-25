@@ -1,0 +1,28 @@
+<pre>
+    <code class="html" ng-non-bindable>
+
+&lt;form name="bindingForm" novalidate="novalidate"&gt;
+
+    ...
+
+    &lt;div class="form-group"&gt;
+        &lt;label&gt;Password&lt;/label&gt;
+        &lt;input ng-model="formData.password" ng-minlength="8" type="password" name="password"/&gt;
+        &lt;span ng-show="bindingForm.password.$valid"&gt;OK!&lt;/span&gt;
+        &lt;span ng-show="bindingForm.password.$error.minlength &amp;&amp; bindingForm.password.$dirty"&gt;Minimum 8 characters!&lt;/span&gt;
+    &lt;/div&gt;
+
+    &lt;button ng-disabled="bindingForm.$invalid" submit-button="true" type="submit"&gt;Submit&lt;/button&gt;
+    &lt;div submit-button="false"&gt;Clear&lt;/div&gt;
+&lt;/form&gt;
+
+    </code>
+</pre>
+
+<script>
+    (function(){
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    })();
+</script>

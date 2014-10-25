@@ -56,6 +56,31 @@
                 }
             };
 
-        }]);
+        }])
+        .directive('submitButton', function(){
+            return{
+                restrict:'A',
+                scope:{
+                    sub:'=submitButton'
+                },
+                link:function(scope,elem){
+                    $(elem[0]).on('click', function(){
+                        if(scope.sub){
+                            alert(JSON.stringify(scope.$parent.formData));
+                        }
+                        scope.$apply(function(){
+                            scope.$parent.formData = {
+                                firstName: '',
+                                lastName: '',
+                                email:'',
+                                password:''
+                            };
+
+                        });
+                        $('[name="firstName"]').focus();
+                    });
+                }
+            }
+        });
 
 })();

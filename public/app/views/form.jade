@@ -1,2 +1,25 @@
-.container(ng-hide="toggle.showCode.state")
-    | Change me please!
+.container
+    .col-xs-12
+        form(name="bindingForm", novalidate)
+            .form-group
+                label First Name
+                input(ng-model-options="{updateOn: 'blur'}", ng-model="formData.firstName", ng-minlength="2", ng-pattern="namePattern", required, autocomplete="off", type="text", class="form-control", name="firstName", placeholder="Enter first name")
+                span(ng-show="bindingForm.firstName.$valid", class="text-success success-msg") OK!
+                span(class="text-danger error-msg", ng-show="bindingForm.firstName.$invalid && bindingForm.firstName.$dirty && formData.firstName !== ''") Invalid format!
+            .form-group
+                label Last Name
+                input(ng-model-options="{updateOn: 'blur'}", ng-model="formData.lastName", ng-minlength="2", ng-pattern="namePattern", required, autocomplete="off", type="text", class="form-control", name="lastName", placeholder="Enter last name")
+                span(ng-show="bindingForm.lastName.$valid", class="text-success success-msg") OK!
+                span(class="text-danger error-msg", ng-show="bindingForm.lastName.$invalid && bindingForm.lastName.$dirty && formData.lastName !== ''") Invalid format!
+            .form-group
+                label Password
+                input(ng-model="formData.password", ng-minlength="8", autocomplete="off", required, type="password", class="form-control", name="password", placeholder="Enter password")
+                span(ng-show="bindingForm.password.$valid", class="text-success success-msg") OK!
+                span(class="text-danger error-msg", ng-show="bindingForm.password.$error.minlength && bindingForm.password.$dirty") Minimum 8 characters!
+
+            button(ng-disabled="bindingForm.$invalid", submit-button="true", class="btn btn-primary", type="submit") Submit
+            div(class="btn btn-default", submit-button="false") Clear
+
+.container(ng-show="toggle.showCode.state")
+    .col-xs-12
+        div(ng-include="'app/views/partials/form_code/code_1.html'")
