@@ -1,0 +1,27 @@
+<pre>
+    <code class="html" ng-non-bindable>
+
+        &lt;div class="col-xs-6"&gt;
+            &lt;div class="checkbox"&gt;
+                &lt;label&gt;&lt;input ng-model="check" type="checkbox"/&gt;Move ng-man&lt;/label&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="col-xs-6 well text-center"&gt;
+            &lt;div class="col-xs-6"&gt;
+                &lt;img src="/app/images/standing_blinking_512.gif" height="128" ng-hide="check"/&gt;
+            &lt;/div&gt;
+            &lt;div class="col-xs-6"&gt;
+                &lt;img src="/app/images/standing_blinking_512.gif" height="128" ng-show="check"/&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;        
+
+    </code>
+</pre>
+
+<script>
+    (function(){
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    })();
+</script>

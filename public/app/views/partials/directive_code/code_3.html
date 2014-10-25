@@ -1,0 +1,28 @@
+<pre>
+    <code class="javascript" ng-non-bindable>
+        (function(){
+            'use strict';
+            angular.module('app')
+                .directive('draggable', function(){
+                    return {
+                        restrict:'A',
+                        link:function(scope, elem){
+                            elem.draggable();
+                        }
+                    };
+                });
+        })();
+    </code>
+</pre>
+<pre>
+    <code class="html" ng-non-bindable>
+        &lt;img ng-src="{{mod.image}}" ng-repeat="mod in model.module" height="48" data-draggable /&gt;
+    </code>
+</pre>
+<script>
+    (function(){
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    })();
+</script>

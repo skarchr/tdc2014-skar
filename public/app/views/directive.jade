@@ -1,6 +1,10 @@
 .container
     .col-xs-12
-        h3 Built in
+        h1 BUILT-IN
+
+.container
+    .col-xs-12
+        h3 ng-show / ng-hide
         .col-xs-6
 
             div(class="checkbox")
@@ -14,12 +18,44 @@
             .col-xs-6
                 img(src="/app/images/standing_blinking_512.gif", height="128", ng-show="check")
 
-    .col-xs-6
-        h3 Custom
-
-    .col-xs-6.well
-
-
 .container(ng-show="toggle.showCode.state")
     .col-xs-12
-        div(ng-include="'app/views/partials/directive_code/directive_code.html'")
+        div(ng-include="'app/views/partials/directive_code/code_1.html'")
+
+
+.container
+    .col-xs-12
+        .col-xs-12.well
+            h3 ng-repeat
+            div(class="col-xs-3 panel text-center" ng-repeat="mod in model.module")
+                .col-xs-12
+                    h4 {{ mod.number }}
+                .col-xs-12
+                    img(ng-src="{{mod.image}}", height="48")
+                .col-xs-12
+                    h5 {{ mod.name }}
+.container(ng-show="toggle.showCode.state")
+    .col-xs-12
+        div(ng-include="'app/views/partials/directive_code/code_2.html'")
+
+.container
+    .col-xs-12
+        .col-xs-12.well
+            h3 Others worth mentioning
+
+            ul
+                li ng-disabled
+                li ng-options
+                li ng-click
+                li ...and many more!
+
+.container
+    .col-xs-12
+        h1 MAKE YOUR OWN!
+        .col-xs-12.well
+            h3 DRAGGABLE
+            div(class="col-xs-3")
+                img(ng-src="{{mod.image}}", ng-repeat="mod in model.module" , height="48", data-draggable)
+.container(ng-show="toggle.showCode.state")
+    .col-xs-12
+        div(ng-include="'app/views/partials/directive_code/code_3.html'")

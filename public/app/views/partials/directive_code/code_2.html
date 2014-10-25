@@ -1,0 +1,36 @@
+<pre>
+    <code class="javascript" ng-non-bindable>
+        $scope.model = {
+            module: [
+            {
+                name:'Spa man',
+                image: 'app/images/spark.png',
+                number: 1
+            }, ...
+    </code>
+</pre>
+
+<pre>
+    <code class="html" ng-non-bindable>
+
+            &lt;div ng-repeat="mod in model.module" class="col-xs-3 panel text-center"&gt;
+                &lt;div class="col-xs-12"&gt;
+                    &lt;h4&gt;{{ mod.number }}&lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class="col-xs-12"&gt;
+                    &lt;img ng-src="{{mod.image}}" height="48"/&gt;
+                &lt;/div&gt;
+                &lt;div class="col-xs-12"&gt;
+                    &lt;h5&gt;{{ mod.name }}&lt;/h5&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+    </code>
+</pre>
+
+<script>
+    (function(){
+        $('pre code').each(function(i, block) {
+            hljs.highlightBlock(block);
+        });
+    })();
+</script>

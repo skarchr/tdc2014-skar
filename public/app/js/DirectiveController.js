@@ -11,50 +11,50 @@
         $scope.submit = function(){
             alert('HelloWorld!');
         };
-
+        $scope.numbOfCols = 4;
         $scope.ngMan = 'images/standing_blinking_512.gif';
 
-        $scope.repeat = {
+        $scope.model = {
 
             module: [
             {
                 name:'Spa man',
-                image: 'images/spark.png',
+                image: 'app/images/spark.png',
                 number: 1
             },
             {
                 name:'Binding man',
-                image: 'images/snake.png',
+                image: 'app/images/snake.png',
                 number: 2
             },
             {
                 name:'Directive man',
-                image: 'images/needle.png',
+                image: 'app/images/needle.png',
                 number: 3
             },
             {
                 name:'Form man',
-                image: 'images/top.png',
+                image: 'app/images/top.png',
                 number: 4
             },
             {
                 name:'Watch man',
-                image: 'images/shadow.png',
+                image: 'app/images/shadow.png',
                 number: 5
             },
             {
                 name:'Filter man',
-                image: 'images/magnet.png',
+                image: 'app/images/magnet.png',
                 number: 6
             },
             {
                 name:'Factory man',
-                image: 'images/gemini.png',
+                image: 'app/images/gemini.png',
                 number: 7
             },
             {
                 name:'Animate man',
-                image: 'images/hard.png',
+                image: 'app/images/hard.png',
                 number: 8
             }]
         };
