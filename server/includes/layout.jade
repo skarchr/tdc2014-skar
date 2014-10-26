@@ -1,5 +1,5 @@
 doctype html
-html(ng-app='app', ng-cloak)
+html(ng-app="app")
     head
         title ngMan
         base(href="/")
@@ -10,6 +10,6 @@ html(ng-app='app', ng-cloak)
         link(rel="stylesheet", href="/css/site.css")
         link(rel="stylesheet", href="/vendor/highlightjs/styles/monokai.css")
 
-    body(ng-controller="navigationController", style="background-color:{{activePage != '' ? '#FFF':'#333333'}}")
+    body(ng-controller="navigationController", style="background-color:{{activePage != '' ? '#FFF':'#333333'}}", class="ng-cloak")
         block main-content
         include scripts
