@@ -16,9 +16,9 @@
                 input(ng-model="formData.password", ng-minlength="8", autocomplete="off", required, type="password", class="form-control", name="password", placeholder="Enter password")
                 span(ng-show="bindingForm.password.$valid", class="text-success success-msg") OK!
                 span(class="text-danger error-msg", ng-show="bindingForm.password.$error.minlength && bindingForm.password.$dirty") Minimum 8 characters!
-
-            button(ng-disabled="bindingForm.$invalid", submit-button="true", class="btn btn-primary", type="submit") Submit
-            div(class="btn btn-default", submit-button="false") Clear
+    div(class="col-xs-12", style="margin-bottom:40px;")
+        button(ng-disabled="bindingForm.$invalid", submit-button="true", class="btn btn-primary", type="submit") Submit
+        div(class="btn btn-default", submit-button="false") Clear
 
 .container(ng-show="toggle.showCode.state", class="code-view")
     .col-xs-12
