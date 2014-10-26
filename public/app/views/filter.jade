@@ -22,12 +22,12 @@
 
 .container
     .col-xs-12
-        h3 MAKE YOUR OWN
+        h3 MAKE YOUR OWN!
         .col-xs-12.well
-            h3 WITHOUT FILTER
+            h4 WITHOUT FIZZBUZZ FILTER
             div(ng-repeat="item in integerList", class="col-xs-1") {{item }}
         .col-xs-12.well
-            h3 WITH FILTER
+            h4 WITH FIZZBUZZ FILTER
             div(ng-repeat="item in integerList", class="col-xs-1") {{item | fizzbuzz}}
 
 .container(ng-show="toggle.showCode.state", class="code-view")

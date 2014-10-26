@@ -36,7 +36,7 @@
 
             module: [
             {
-                name:'Spa man',
+                name:'Init man',
                 image: 'app/images/spark.png',
                 number: 1
             },
@@ -66,12 +66,12 @@
                 number: 6
             },
             {
-                name:'Factory man',
+                name:'Animate man',
                 image: 'app/images/gemini.png',
                 number: 7
             },
             {
-                name:'Animate man',
+                name:'Tip man',
                 image: 'app/images/hard.png',
                 number: 8
             }]

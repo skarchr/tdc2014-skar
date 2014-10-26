@@ -54,7 +54,7 @@
 
         $scope.integerList = [];
 
-        for(var i = 1; i<=100; i++){
+        for(var i = 1; i<=50; i++){
             $scope.integerList.push(i);
         }
 
