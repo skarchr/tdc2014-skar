@@ -19,3 +19,15 @@
 .container(ng-show="toggle.showCode.state", class="code-view")
     .col-xs-12
         div(ng-include="'app/views/partials/watch_code/code_1.html'")
+
+.container
+    .col-xs-12
+        h2 HOMEWORK
+
+        ul
+            li
+                h4 $broadcast (downwards to all child scopes)
+            li
+                h4 $on (listen on events of a given type)
+            li
+                h4 $emit (upwards through the scope hierarchy)
