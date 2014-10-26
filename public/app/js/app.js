@@ -25,7 +25,8 @@
 
             $routeProvider.
                 when('/menu', {
-                    templateUrl: '/partials/views/menu'
+                    templateUrl: '/partials/views/menu',
+                    controller: 'menuController'
                 }).
                 when('/init', {
                     title:'Init',
