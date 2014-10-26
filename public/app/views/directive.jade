@@ -1,22 +1,36 @@
 .container
-    .col-xs-12
-        h1 BUILT-IN
+    .col-xs-12.text-right.text-danger
+        h3 PLEASE INSERT DOM-MANIPULATION HERE!
 
 .container
     .col-xs-12
-        h3 ng-show / ng-hide
-        .col-xs-6
+        h1 BUILT-IN
+        div(class="col-xs-6 hidden-xs hidden-sm hidden-md", style="margin-top:20px;")
+            .col-xs-12.text-center
+                .col-xs-offset-3.col-xs-3
+                    button(ng-click="ngJump()", class="btn btn-nintendo") &#8679;
+            .col-xs-12.text-center
+                div(class="col-xs-3", style="margin-left:35px;")
+                    button(ng-click="run = false", class="btn btn-nintendo") &#8678;
+                div(class="col-xs-3", style="margin-left:-33px;")
+                    button(class="btn btn-nintendo btn-idle") o
+                div(class="col-xs-3", style="margin-left:-36px;")
+                    button(ng-click="run = !run", ng-disabled="run" ,class="btn btn-nintendo {{run ? 'active':''}}") &#8680;
+            .col-xs-12.text-center
+                .col-xs-offset-3.col-xs-3
+                    button(ng-click="ngSlide()", class="btn btn-nintendo") &#8681;
 
-            div(class="checkbox")
-                label
-                    input(ng-model="check", type="checkbox")
-                    | Move ng-man
+        div(class="col-xs-12 text-center visible-xs visible-sm visible-md")
+            button(ng-click="ngJump()", class="btn btn-default") Jump
+            button(ng-click="run = false", class="btn btn-default") Stop
+            button(ng-click="run = !run", ng-disabled="run" ,class="btn btn-deafult {{run ? 'active':''}}") Run
+            button(ng-click="ngSlide()", class="btn btn-default") Slide
 
-        .col-xs-6.well.text-center
-            .col-xs-6
-                img(src="/app/images/standing_blinking_512.gif", height="128", ng-hide="check")
-            .col-xs-6
-                img(src="/app/images/standing_blinking_512.gif", height="128", ng-show="check")
+        div(class="col-xs-6 text-center" style="padding-bottom: {{jump ? '50px':'0'}}; padding-top: {{jump ? '0':'50px'}}")
+            img(src="/app/images/standing_blinking_512.gif", height="256", ng-hide="run || jump || slide")
+            img(src="/app/images/running_512.gif", height="256", ng-show="run && !jump && !slide")
+            img(src="/app/images/jump.png", height="256", ng-show="jump")
+            img(src="/app/images/slide.png", height="256", ng-show="slide")
 
 .container(ng-show="toggle.showCode.state", class="code-view")
     .col-xs-12
@@ -38,25 +52,22 @@
     .col-xs-12
         div(ng-include="'app/views/partials/directive_code/code_2.html'")
 
-.container
-    .col-xs-12
-        .col-xs-12.well
-            h3 Others worth mentioning
-
-            ul
-                li ng-disabled
-                li ng-options
-                li ng-click
-                li ng-include
-                li ...and many more!
 
 .container
     .col-xs-12
-        h1 MAKE YOUR OWN!
-        .col-xs-12.well
-            h3 DRAGGABLE
+        h3 DIRECTIVES CAN BE USED TO MAKE:
+
+        ul
+            li YOUR OWN DSL
+            li TEMPLATES
+            li CLEANER VIEWS
+
+
+        div(class="col-xs-12 well", style="height:500px;")
+            h3 EXAMPLE <small> These images are draggable</small>
+
             div(class="col-xs-3")
-                img(ng-src="{{mod.image}}", ng-repeat="mod in model.module" , height="48", data-draggable)
+                img(ng-src="{{mod.image}}", ng-repeat="mod in model.module" , height="56", data-draggable)
 .container(ng-show="toggle.showCode.state", class="code-view")
     .col-xs-12
         div(ng-include="'app/views/partials/directive_code/code_3.html'")

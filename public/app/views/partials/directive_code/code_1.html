@@ -1,20 +1,52 @@
 <pre>
+    <code class="javascript" ng-non-bindable>
+        (function(){
+            'use strict';
+
+            angular.module('app').controller('directiveController', ['$scope', '$timeout', function($scope, $timeout){
+                $scope.run = false;
+                $scope.jump = false;
+                $scope.slide = false;
+
+                $scope.ngJump = function(){
+
+                    $scope.jump = true;
+
+                    $timeout(function(){
+                        $scope.jump = false;
+                    }, 300);
+                };
+
+                $scope.ngSlide = function(){
+
+                    $scope.slide = true;
+
+                    $timeout(function(){
+                        $scope.slide = false;
+                    }, 300);
+                };
+            }]);
+        })();
+    </code>
+</pre>
+
+<pre>
     <code class="html" ng-non-bindable>
 
-        &lt;div class="col-xs-6"&gt;
-            &lt;div class="checkbox"&gt;
-                &lt;label&gt;&lt;input ng-model="check" type="checkbox"/&gt;Move ng-man&lt;/label&gt;
-            &lt;/div&gt;
+        &lt;div&gt;
+            &lt;button ng-click="ngJump()"&gt;Jump&lt;/button&gt;
+            &lt;button ng-click="run = false"&gt;Stop&lt;/button&gt;
+            &lt;button ng-click="run = !run" ng-disabled="run" class="btn btn-deafult {{run ? 'active':''}}"&gt;Run&lt;/button&gt;
+            &lt;button ng-click="ngSlide()"&gt;Slide&lt;/button&gt;
         &lt;/div&gt;
-        &lt;div class="col-xs-6 well text-center"&gt;
-            &lt;div class="col-xs-6"&gt;
-                &lt;img src="/app/images/standing_blinking_512.gif" height="128" ng-hide="check"/&gt;
-            &lt;/div&gt;
-            &lt;div class="col-xs-6"&gt;
-                &lt;img src="/app/images/standing_blinking_512.gif" height="128" ng-show="check"/&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;        
 
+        &lt;div style="padding-bottom: {{jump ? '50px':'0'}}; padding-top: {{jump ? '0':'50px'}}""&gt;
+            &lt;img src="/app/images/standing_blinking_512.gif" ng-hide="run || jump || slide"/&gt;
+            &lt;img src="/app/images/running_512.gif" ng-show="run &amp;&amp; !jump &amp;&amp; !slide"/&gt;
+            &lt;img src="/app/images/jump.png" ng-show="jump"/&gt;
+            &lt;img src="/app/images/slide.png" ng-show="slide"/&gt;
+        &lt;/div&gt;
+        
     </code>
 </pre>
 

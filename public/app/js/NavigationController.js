@@ -9,7 +9,7 @@
 
         $scope.toggle = {
             showCode: {
-                state: false
+                state: true
             }
         };
         $scope.step = 0;

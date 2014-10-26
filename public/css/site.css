@@ -46,7 +46,7 @@ label {
   font-family: pixel;
 }
 .code-view {
-  margin-bottom: 40px;
+  margin-bottom: 80px;
 }
 .content > .ng-enter {
   -webkit-animation: bounceInLeft 1s;
@@ -83,4 +83,27 @@ label {
 }
 .pointer {
   cursor: pointer;
+}
+.padded-list > li {
+  margin-top: 40px;
+}
+.btn-nintendo,
+btn-nintendo:focus {
+  background-color: #1b1b1b;
+  color: #1b1b1b;
+  font-size: 40px;
+  font-weight: bold;
+}
+.btn-nintendo:disabled {
+  background-color: #000;
+  opacity: 1;
+}
+.btn-nintendo:hover {
+  color: #000;
+}
+.btn-idle {
+  color: #1b1b1b;
+}
+pre {
+  padding: 0;
 }

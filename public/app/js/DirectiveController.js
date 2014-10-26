@@ -1,12 +1,30 @@
 (function(){
     'use strict';
 
-    angular.module('app').controller('directiveController', function($scope){
+    angular.module('app').controller('directiveController', ['$scope', '$timeout', function($scope, $timeout){
 
         $scope.temp = '';
 
-        $scope.check = false;
         $scope.run = false;
+        $scope.jump = false;
+        $scope.slide = false;
+        $scope.ngJump = function(){
+
+            $scope.jump = true;
+
+            $timeout(function(){
+                $scope.jump = false;
+            }, 300);
+        };
+
+        $scope.ngSlide = function(){
+
+            $scope.slide = true;
+
+            $timeout(function(){
+                $scope.slide = false;
+            }, 300);
+        };
 
         $scope.submit = function(){
             alert('HelloWorld!');
@@ -59,6 +77,6 @@
             }]
         };
 
-    });
+    }]);
 
 })();
