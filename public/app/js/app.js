@@ -28,6 +28,9 @@
                     templateUrl: '/partials/views/menu',
                     controller: 'menuController'
                 }).
+                when('/credits', {
+                    templateUrl: '/partials/views/credits'
+                }).
                 when('/init', {
                     title:'Init',
                     templateUrl: '/partials/views/init'

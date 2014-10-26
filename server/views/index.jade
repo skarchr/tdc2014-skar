@@ -2,7 +2,7 @@ extends ../includes/layout
 
 block main-content
 
-    .container(ng-hide="activePage == '' || activePage == 'menu' ")
+    .container(ng-hide="activePage == '' || activePage == 'menu' || activePage == 'credits' ")
         ul(class="list-unstyled list-inline pull-left", style="padding-top:5px;min-height:10px;margin-bottom:5px;")
             li
                 a(href="/menu", class="btn btn-default btn-xs") Select
@@ -12,7 +12,7 @@ block main-content
         ul(class="list-unstyled list-inline pull-right", style="padding-top:5px;min-height:10px;margin-bottom:5px;")
             li
                 a(class="btn btn-default btn-xs {{toggle.showCode.state ? 'active':''}}", ng-click="toggle.showCode.state = !toggle.showCode.state") Code mode
-    nav(class="navbar navbar-default hidden-xs", role="navigation", ng-hide="activePage == '' || activePage == 'menu'", style="margin-bottom:40px;")
+    nav(class="navbar navbar-default hidden-xs", role="navigation", ng-hide="activePage == '' || activePage == 'menu' || activePage == 'credits'", style="margin-bottom:40px;")
         .container
             .navbar-header
                 button(type="button", class="navbar-toggle", data-toggle="collapse", data-target=".bs-navbar-collapse")
